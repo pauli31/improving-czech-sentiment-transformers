@@ -35,6 +35,35 @@ python3 run_lstm_baseline.py --dataset_name csfd --model_name lstm-base --embedd
 python3 run_lstm_baseline.py --dataset_name mallcz --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 10 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data
 python3 run_lstm_baseline.py --dataset_name mallcz --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --binary
 
+```
+
+Transformers Fine-Tuning
+
+for example CSFD 
+```
+# CzechALBERT
+python3 run_polarity_fine_tuning.py --model_name ./data/pre-trained/czert-base-uncased --dataset_name csfd --batch_size 14 --from_tf --tokenizer_type berttokenizerfast --lr 2e-6 --epoch_num 8 --use_only_train_data --model_type albert --use_random_seed --max_seq_len 512
+
+# CzechBERT
+python3 run_polarity_fine_tuning.py --model_name ./data/pre-trained/czert-bert-base-cased --dataset_name csfd --batch_size 14 --from_tf --tokenizer_type berttokenizerfast --lr 2e-5 --epoch_num 12 --use_only_train_data --use_random_seed --max_seq_len 512
+
+# mBERT
+python3 run_polarity_fine_tuning.py --model_name bert-base-multilingual-cased --dataset_name csfd --batch_size 14 --lr 2e-6 --epoch_num 13 --use_only_train_data --use_random_seed --max_seq_len 512
+
+# SlavicBERT
+python3 run_polarity_fine_tuning.py --model_name DeepPavlov/bert-base-bg-cs-pl-ru-cased --dataset_name csfd --batch_size 14 --lr 2e-6 --epoch_num 12 --use_only_train_data --use_random_seed --max_seq_len 512
+
+# RandomALBERT
+python3 run_polarity_fine_tuning.py --model_name ./data/pre-trained/base_random --dataset_name csfd --batch_size 14 --from_tf --tokenizer_type berttokenizerfast --lr 2e-6 --epoch_num 14 --model_type albert --use_random_seed --max_seq_len 512 --use_only_train_data
+
+# XLM-R-Base
+python3 run_polarity_fine_tuning.py --model_type xlm-r --model_name xlm-roberta-base --dataset_name csfd --batch_size 32 --tokenizer_type xlm-r-tokenizer --scheduler constant --lr 2e-6 --epoch_num 15 --use_random_seed --max_seq_len 512 --use_only_train_data --enable_wandb --num_repeat 1
+
+# XLM-R-Large
+python3 run_polarity_fine_tuning.py --model_type xlm-r --model_name xlm-roberta-large --dataset_name csfd --batch_size 28 --tokenizer_type xlm-r-tokenizer --lr 2e-6 --epoch_num 11 --use_random_seed --max_seq_len 512 --use_only_train_data --data_parallel --enable_wandb --num_repeat 1
+
+# XLM
+python3 run_polarity_fine_tuning.py --model_type xlm --model_name xlm-mlm-100-1280 --dataset_name csfd --batch_size 34 --tokenizer_type xlmtokenizer --lr 2e-5 --epoch_num 11 --use_random_seed --max_seq_len 512 --use_only_train_data --enable_wandb --num_repeat 1 --data_parallel
 
 ```
 
@@ -102,7 +131,9 @@ Create conda enviroment
    ```
 
    Download the Czech [fastText embeddings](https://fasttext.cc/docs/en/english-vectors.html) , copy and unzip into `/data/embeddings/cs` 
-
+   
+   Download the pre-trained [Czert models](https://drive.google.com/drive/folders/1o-PedUATiGyiSFG9gyj-xul30NXRfMFB?usp=sharing) , alternatively from [Czert github](https://github.com/kiv-air/Czert)
+   and copy them to `/data/pre-trained` 
 
 Fine-tuned Models:
 --------

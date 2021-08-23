@@ -19,6 +19,7 @@ EMB_DIR = os.path.join(DATA_DIR, "embeddings")
 PREPROCESSING_DIR = os.path.join(BASE_PATH, 'preprocessing')
 PREPROCESSING_REGEX = os.path.join(PREPROCESSING_DIR, 'expressions.txt')
 WANDB_DIR = os.path.join(BASE_PATH, 'wandb')
+MODELS_DIR = os.path.join(BASE_PATH, 'models')
 
 
 
@@ -34,6 +35,7 @@ Path(TENSOR_BOARD_LOGS).mkdir(parents=True, exist_ok=True)
 Path(LSTM_TMP_DIR).mkdir(parents=True, exist_ok=True)
 Path(EMB_DIR).mkdir(parents=True, exist_ok=True)
 Path(WANDB_DIR).mkdir(parents=True, exist_ok=True)
+Path(MODELS_DIR).mkdir(parents=True, exist_ok=True)
 
 
 
