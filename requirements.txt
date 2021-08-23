@@ -3,3 +3,13 @@ pandas==1.0.5
 numpy==1.18.5
 matplotlib==3.2.2
 scikit-learn==0.24.2
+keras-self-attention==0.47.0
+Keras==2.4.3
+tensorflow==2.3.0
+tensorflow-addons==0.11.2
+nltk==3.5
+wandb==0.10.9
+transformers==4.5.1
+beautifulsoup4==4.7.1
+ftfy==5.6
+lxml==4.6.2

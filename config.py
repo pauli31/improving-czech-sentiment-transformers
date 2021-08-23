@@ -9,6 +9,18 @@ LOG_DIR = os.path.join(BASE_PATH, 'logs')
 TRAINED_MODELS_DIR = os.path.join(BASE_PATH, 'trained_models')
 RESULTS_DIR = os.path.join(BASE_PATH, "results")
 
+LSTM_TRAINED_MODELS = os.path.join(TRAINED_MODELS_DIR, 'lstm')
+TRANSFORMERS_TRAINED_MODELS = os.path.join(TRAINED_MODELS_DIR, 'transformers')
+TENSOR_BOARD_LOGS = os.path.join(LOG_DIR, 'tensor-logs')
+LSTM_TMP_DIR = os.path.join(DATA_DIR, 'lstm_baseline')
+LSTM_TMP_HISTOGRAMS = os.path.join(LSTM_TMP_DIR, 'histograms')
+TMP_SPLIT_DIR = os.path.join(LSTM_TMP_DIR, "split")
+EMB_DIR = os.path.join(DATA_DIR, "embeddings")
+PREPROCESSING_DIR = os.path.join(BASE_PATH, 'preprocessing')
+PREPROCESSING_REGEX = os.path.join(PREPROCESSING_DIR, 'expressions.txt')
+WANDB_DIR = os.path.join(BASE_PATH, 'wandb')
+
+
 
 Path(DATA_DIR).mkdir(parents=True, exist_ok=True)
 Path(POLARITY_DIR).mkdir(parents=True, exist_ok=True)
@@ -16,6 +28,12 @@ Path(POLARITY_DIR).mkdir(parents=True, exist_ok=True)
 Path(LOG_DIR).mkdir(parents=True, exist_ok=True)
 Path(TRAINED_MODELS_DIR).mkdir(parents=True, exist_ok=True)
 Path(RESULTS_DIR).mkdir(parents=True, exist_ok=True)
+Path(LSTM_TRAINED_MODELS).mkdir(parents=True, exist_ok=True)
+Path(TRANSFORMERS_TRAINED_MODELS).mkdir(parents=True, exist_ok=True)
+Path(TENSOR_BOARD_LOGS).mkdir(parents=True, exist_ok=True)
+Path(LSTM_TMP_DIR).mkdir(parents=True, exist_ok=True)
+Path(EMB_DIR).mkdir(parents=True, exist_ok=True)
+Path(WANDB_DIR).mkdir(parents=True, exist_ok=True)
 
 
 

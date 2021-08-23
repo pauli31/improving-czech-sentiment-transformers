@@ -22,16 +22,18 @@ python3 baseline.py --dataset_name mallcz --use_train_test --word_ngram_vectoriz
 
 
 LSTM Baseline
+you have to delete the temporary directory `/data/lstm_baseline` before each run 
+
 ```
---dataset_name fb --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 256 --epoch_count 5 --optimizer AdamW --batch_size 256 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --weight_decay 0.0001
---dataset_name fb --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 256 --epoch_count 5 --optimizer AdamW --batch_size 256 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --weight_decay 0.0001 --binary
+python3 run_lstm_baseline.py --dataset_name fb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --max_seq_len 64 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 256 --epoch_count 5 --optimizer AdamW --batch_size 256 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --weight_decay 0.0001
+python3 run_lstm_baseline.py --dataset_name fb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --max_seq_len 64 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 256 --epoch_count 5 --optimizer AdamW --batch_size 256 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --weight_decay 0.0001 --binary
 
 
---dataset_name csfd --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data
---dataset_name csfd --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --binary
+python3 run_lstm_baseline.py --dataset_name csfd --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data
+python3 run_lstm_baseline.py --dataset_name csfd --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --binary
 
---dataset_name mallcz --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 10 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data
---dataset_name mallcz --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --binary
+python3 run_lstm_baseline.py --dataset_name mallcz --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 10 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data
+python3 run_lstm_baseline.py --dataset_name mallcz --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --binary
 
 
 ```
@@ -99,6 +101,8 @@ Create conda enviroment
    python3 split_data.py
    ```
 
+   Download the Czech [fastText embeddings](https://fasttext.cc/docs/en/english-vectors.html) , copy and unzip into `/data/embeddings/cs` 
+
 
 Fine-tuned Models:
 --------
@@ -120,8 +124,10 @@ If you use this software for academic research, please cite the following papers
 
 License:
 --------
-The code is licensed under the MIT License (see LICENSE.txt file), but the fine-tuned models fall under their source license, please see the cited papers for the 
+The code is licensed under the GNU LESSER GENERAL PUBLIC LICENSE License (see LICENSE.txt file), but the fine-tuned models fall under their source license, please see the cited papers for the 
 corresponding licenses.
+
+Please respect the licenses of the dependency packages.
 
 
 Contact:
