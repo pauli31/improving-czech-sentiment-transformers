@@ -1,5 +1,5 @@
 # Improving Czech Sentiment with Transformers
-Repository for paper:
+Repository for the paper:
 ##Are the Multilingual Models Better? Improving Czech Sentiment with Transformers
 
 If you use this software for academic research, [please cite the paper](#publication)
@@ -7,9 +7,33 @@ If you use this software for academic research, [please cite the paper](#publica
 
 Usage:
 --------
-FB Baseline LR
+Logistic Regression Baseline
 ```
 python3 baseline.py --dataset_name fb --use_train_test --word_ngram_vectorizer cv --char_ngram_vectorizer cv
+python3 baseline.py --dataset_name fb --use_train_test --word_ngram_vectorizer cv --char_ngram_vectorizer cv --binary
+
+python3 baseline.py --dataset_name csfd --use_train_test --word_ngram_vectorizer cv --char_ngram_vectorizer none
+python3 baseline.py --dataset_name csfd --use_train_test --word_ngram_vectorizer cv --char_ngram_vectorizer none --binary
+
+python3 baseline.py --dataset_name mallcz --use_train_test --word_ngram_vectorizer cv --char_ngram_vectorizer none
+python3 baseline.py --dataset_name mallcz --use_train_test --word_ngram_vectorizer cv --char_ngram_vectorizer none --binary
+
+```
+
+
+LSTM Baseline
+```
+--dataset_name fb --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 256 --epoch_count 5 --optimizer AdamW --batch_size 256 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --weight_decay 0.0001
+--dataset_name fb --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 256 --epoch_count 5 --optimizer AdamW --batch_size 256 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --weight_decay 0.0001 --binary
+
+
+--dataset_name csfd --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data
+--dataset_name csfd --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --binary
+
+--dataset_name mallcz --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 10 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data
+--dataset_name mallcz --enable_wandb --model_name lstm-base --embeddings_file cc.cs.300.vec --embeddings_size 300 --max_words 300000 --trainable_word_embeddings --tokenizer toktok --use_stemmer --use_data_cleaner --max_seq_len 512 --num_repeat 1 --use_attention --attention_type multiplicative --rnn_cells 128 --epoch_count 2 --optimizer AdamW --batch_size 128 --lr 0.0005 --lr_scheduler_name cosine --warm_up_steps 0.1 --use_only_train_data --binary
+
+
 ```
 
 Setup:
@@ -78,31 +102,9 @@ Create conda enviroment
 
 Fine-tuned Models:
 --------
-3 Classes
+[PyTorch Fine-tuned models](https://drive.google.com/drive/folders/1vvbX_PmQvtw-2Vs-vgy7oKMFUeaRwH_A?usp=sharing)
 
-Model | CSFD | FB | Mallcz  
---- | --- | --- | --- 
-Czert-A | [link]() |  |  
-Czert-B |  |  |  
-mBERT |  |  |  
-SlavicBERT |  |  |  
-RandomALBERT |  |  |  
-XLM-R-Base |  |  |  
-XLM-R-Large |  |  |  
-XLM |  |  |  
 
-2 - classes
-
-Model | CSFD | FB | Mallcz  
---- | --- | --- | --- 
-Czert-A |  |  |  
-Czert-B |  |  |  
-mBERT |  |  |  
-SlavicBERT |  |  |  
-RandomALBERT |  |  |  
-XLM-R-Base |  |  |  
-XLM-R-Large |  |  |  
-XLM |  |  |  
 
 Publication:
 --------

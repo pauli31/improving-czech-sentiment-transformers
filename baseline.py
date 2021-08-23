@@ -307,13 +307,13 @@ def kfold_training(splits, X, Y, alg, classes_pred, print_stats=True):
 
 
 if __name__ == '__main__':
-    sys.argv.extend(['--dataset_name', 'fb'])
-    sys.argv.extend(['--use_train_test'])
+    # sys.argv.extend(['--dataset_name', 'csfd'])
+    # sys.argv.extend(['--use_train_test'])
     # sys.argv.extend(['--use_kfold'])
     # sys.argv.extend(['--use_grid'])
     # sys.argv.extend(['--binary'])
-    sys.argv.extend(['--word_ngram_vectorizer','cv'])
-    sys.argv.extend(['--char_ngram_vectorizer','cv'])
+    # sys.argv.extend(['--word_ngram_vectorizer','cv'])
+    # sys.argv.extend(['--char_ngram_vectorizer','none'])
 
     parser = argparse.ArgumentParser(allow_abbrev=False)
 
