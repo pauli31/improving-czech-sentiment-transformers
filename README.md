@@ -147,7 +147,11 @@ Publication:
 If you use this software for academic research, please cite the following papers
 
 ```
-@inproceedings{TODO
+@article{pvribavn2021multilingual,
+  title={Are the Multilingual Models Better? Improving Czech Sentiment with Transformers},
+  author={P{\v{r}}ib{\'a}{\v{n}}, Pavel and Steinberger, Josef},
+  journal={arXiv preprint arXiv:2108.10640},
+  year={2021}
 }
 
 
