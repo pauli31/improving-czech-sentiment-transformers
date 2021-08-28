@@ -144,7 +144,7 @@ Fine-tuned Models:
 Publication:
 --------
 
-If you use this software for academic research, please cite the following papers
+If you use this software for academic research, please cite the our paper
 
 ```
 @article{pvribavn2021multilingual,
