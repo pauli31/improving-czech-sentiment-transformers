@@ -15,7 +15,7 @@ logging.basicConfig(format=LOGGING_FORMAT,
                     datefmt=LOGGING_DATE_FORMAT)
 logger = logging.getLogger(__name__)
 
-FAST_DEBUG = False
+FAST_DEBUG = True
 
 class SentimentClassifier(nn.Module):
     """"

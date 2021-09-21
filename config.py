@@ -40,34 +40,34 @@ Path(MODELS_DIR).mkdir(parents=True, exist_ok=True)
 
 
 # fb dataset dirs
-FACEBOOK_DATASET_DIR = os.path.join(POLARITY_DIR, 'fb', 'splitted')
+FACEBOOK_DATASET_DIR = os.path.join(POLARITY_DIR, 'fb', 'split')
 FACEBOOK_DATASET_TRAIN = os.path.join(FACEBOOK_DATASET_DIR, 'train', 'train.csv')
 FACEBOOK_DATASET_TEST = os.path.join(FACEBOOK_DATASET_DIR, 'test', 'test.csv')
 FACEBOOK_DATASET_DEV = os.path.join(FACEBOOK_DATASET_DIR, 'dev', 'dev.csv')
 FACEBOOK_DATASET = os.path.join(FACEBOOK_DATASET_DIR, 'dataset.csv')
 
 # csfd dataset dirs
-CSFD_DATASET_DIR = os.path.join(POLARITY_DIR, 'csfd', 'splitted')
+CSFD_DATASET_DIR = os.path.join(POLARITY_DIR, 'csfd', 'split')
 CSFD_DATASET_TRAIN = os.path.join(CSFD_DATASET_DIR, 'train', 'train.csv')
 CSFD_DATASET_TEST = os.path.join(CSFD_DATASET_DIR, 'test', 'test.csv')
 CSFD_DATASET_DEV = os.path.join(CSFD_DATASET_DIR, 'dev', 'dev.csv')
 CSFD_DATASET = os.path.join(CSFD_DATASET_DIR, 'dataset.csv')
 
 # mallcz cz dataset dirs
-MALL_DATASET_DIR = os.path.join(POLARITY_DIR, 'mallcz', 'splitted')
+MALL_DATASET_DIR = os.path.join(POLARITY_DIR, 'mallcz', 'split')
 MALL_DATASET_TRAIN = os.path.join(MALL_DATASET_DIR, 'train', 'train.csv')
 MALL_DATASET_TEST = os.path.join(MALL_DATASET_DIR, 'test', 'test.csv')
 MALL_DATASET_DEV = os.path.join(MALL_DATASET_DIR, 'dev', 'dev.csv')
 MALL_DATASET = os.path.join(MALL_DATASET_DIR, 'dataset.csv')
 
 
-IMDB_DATASET_CL_DIR = os.path.join(POLARITY_DIR, 'imdb', 'splitted-cl')
+IMDB_DATASET_CL_DIR = os.path.join(POLARITY_DIR, 'imdb', 'split-cl')
 IMDB_DATASET_CL_TRAIN = os.path.join(IMDB_DATASET_CL_DIR, 'train', 'train.csv')
 IMDB_DATASET_CL_TEST = os.path.join(IMDB_DATASET_CL_DIR, 'test', 'test.csv')
 IMDB_DATASET_CL_DEV = os.path.join(IMDB_DATASET_CL_DIR, 'dev', 'dev.csv')
 IMDB_DATASET_CL = os.path.join(IMDB_DATASET_CL_DIR, 'dataset.csv')
 
-IMDB_DATASET_DIR = os.path.join(POLARITY_DIR, 'imdb', 'splitted')
+IMDB_DATASET_DIR = os.path.join(POLARITY_DIR, 'imdb', 'split')
 IMDB_DATASET_TRAIN = os.path.join(IMDB_DATASET_DIR, 'train', 'train.csv')
 IMDB_DATASET_TEST = os.path.join(IMDB_DATASET_DIR, 'test', 'test.csv')
 IMDB_DATASET_DEV = os.path.join(IMDB_DATASET_DIR, 'dev', 'dev.csv')
