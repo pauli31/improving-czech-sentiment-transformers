@@ -145,7 +145,7 @@ Fine-tuned Models:
 Publication:
 --------
 
-If you use this software for academic research, please cite the our paper
+If you use this software for academic research, please cite the our [paper](https://aclanthology.org/2021.ranlp-1.128/)
 
 ```
 @inproceedings{priban-steinberger-2021-multilingual,
