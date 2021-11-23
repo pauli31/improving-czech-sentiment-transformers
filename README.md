@@ -147,11 +147,18 @@ Publication:
 If you use this software for academic research, please cite the our paper
 
 ```
-@article{pvribavn2021multilingual,
-  title={Are the Multilingual Models Better? Improving Czech Sentiment with Transformers},
-  author={P{\v{r}}ib{\'a}{\v{n}}, Pavel and Steinberger, Josef},
-  journal={arXiv preprint arXiv:2108.10640},
-  year={2021}
+@inproceedings{priban-steinberger-2021-multilingual,
+    title = "Are the Multilingual Models Better? Improving {C}zech Sentiment with Transformers",
+    author = "P{\v{r}}ib{\'a}{\v{n}}, Pavel  and
+      Steinberger, Josef",
+    booktitle = "Proceedings of the International Conference on Recent Advances in Natural Language Processing (RANLP 2021)",
+    month = sep,
+    year = "2021",
+    address = "Held Online",
+    publisher = "INCOMA Ltd.",
+    url = "https://aclanthology.org/2021.ranlp-main.128",
+    pages = "1138--1149",
+    abstract = "In this paper, we aim at improving Czech sentiment with transformer-based models and their multilingual versions. More concretely, we study the task of polarity detection for the Czech language on three sentiment polarity datasets. We fine-tune and perform experiments with five multilingual and three monolingual models. We compare the monolingual and multilingual models{'} performance, including comparison with the older approach based on recurrent neural networks. Furthermore, we test the multilingual models and their ability to transfer knowledge from English to Czech (and vice versa) with zero-shot cross-lingual classification. Our experiments show that the huge multilingual models can overcome the performance of the monolingual models. They are also able to detect polarity in another language without any training data, with performance not worse than 4.4 {\%} compared to state-of-the-art monolingual trained models. Moreover, we achieved new state-of-the-art results on all three datasets.",
 }
 
 
